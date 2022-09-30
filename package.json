@@ -1,0 +1,23 @@
+{
+  "name": "cpsc8750-publicwebsite",
+  "version": "0.0.1",
+  "description": "public website deployed on Fly.io for CPSC 8750",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashsobeck/cpsc8750-publicwebsite.git"
+  },
+  "author": "Ashton Sobeck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashsobeck/cpsc8750-publicwebsite/issues"
+  },
+  "homepage": "https://github.com/ashsobeck/cpsc8750-publicwebsite#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
