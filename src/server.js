@@ -19,7 +19,8 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
   const dateNow = Date.now().toString();
-  res.cookie('visitorId', req.cookies.visitorId ? nextVisitorId : nextVisitorId++);
+  let visitorId = req.cookies.visitorId ? nextVisitorId : ++nextVisitorId;
+  res.cookie('visitorId', visitorId);
   res.cookie('visited', dateNow);
   console.log(req.cookies.visited);
   if (req.cookies.visited) {
@@ -30,7 +31,7 @@ app.get('/', (req, res) => {
   res.render('welcome', {
     name: req.query.name || "World",
     accessDate: new Date().toLocaleString(),
-    visitorNum: req.cookies.visitorId ?? nextVisitorId++,
+    visitorNum: visitorId,
     timeSinceLastVisit: req.cookies.visited, 
   });
 });
