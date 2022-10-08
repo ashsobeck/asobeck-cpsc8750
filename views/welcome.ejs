@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>An Example Title</title>
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body>
+    <h1>Hello, <%= name %>!</h1>
+    <p>HTML is so much better than a plain string!</p>
+    <p>This site was accessed at <%= accessDate %></p>
+    <p>You are visitor #<%= visitorNum %></p>
+    <% if ( timeSinceLastVisit ) { %>
+      <p>It has been <%= timeSinceLastVisit %> seconds since your last visit </p>
+    <% } else {%>
+      <p>You have never visited</p>
+    <% } %> 
+  </body>
+</html>
