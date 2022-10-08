@@ -10,7 +10,7 @@
     <p>HTML is so much better than a plain string!</p>
     <p>This site was accessed at <%= accessDate %></p>
     <p>You are visitor #<%= visitorNum %></p>
-    <% if ( timeSinceLastVisit ) { %>
+    <% if ( timeSinceLastVisit != null ) { %>
       <p>It has been <%= timeSinceLastVisit %> seconds since your last visit </p>
     <% } else {%>
       <p>You have never visited</p>
