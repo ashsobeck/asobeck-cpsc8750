@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Trivia</title>
+    <link rel="stylesheet" href="app.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Trivia Question</h1>
+    </header>
+    <p>
+      <%- question %>
+    </p>
+    <ol>
+      <% answers.forEach(answer=> { %>
+        <li>
+          <%- answer %>
+        </li>
+        <% }); %>
+    </ol>
+    <footer>
+      <dl>
+        <dt>Category</dt>
+        <dd>
+          <%- category %>
+        </dd>
+        <dt>Difficulty</dt>
+        <dd>
+          <%- difficulty %>
+        </dd>
+      </dl>
+    </footer>
+  </body>
+
+</html>
